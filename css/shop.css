@@ -1,0 +1,486 @@
+:root {
+    --padding-section: 60px;
+    --main-color: rgb(255, 94, 0);
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* small */
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+/* medium */
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+/* Header */
+.speachial-header {
+    text-align: center;
+}
+.speachial-header h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: var(--main-color);
+}
+.speachial-header p {
+    margin-bottom: 100px;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Start header */
+header {
+    position: absolute;
+    width: 100%;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    height: 98px;
+}
+header .container .logo {
+    display: flex;
+    align-items: center;
+}
+header .container .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+header .container .logo h2 {
+    color: black;
+    font-size: 22px;
+}
+header .container nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .container nav ul {
+    display: flex;
+}
+header .container nav ul li {
+    padding: 40px;
+}
+header .container nav ul li a {
+    color: black;
+    font-size: 14px;
+    transition:0.3s;
+}
+header .container nav ul li a:hover {
+    color: var(--main-color);
+}
+@media (max-width: 767px) {
+    header .container nav ul{
+        display: none;
+    }
+    .container nav .toggle-menu:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.138);
+        }
+    header nav ul li {
+        padding: 15px !important;
+    }
+}
+.container nav .toggle-menu {
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 30px;
+} 
+@media (min-width: 767px) {
+    .container nav .toggle-menu {
+        display: none;
+    }
+}
+header .container .form i {
+    color: var(--main-color);
+    font-size: 22px;
+    position: relative;
+}
+header .container .form i::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -20px;
+}
+/* End header */
+/* Start landing */
+.landing {
+    background-color: #fafafa;
+    height: 100vh;
+}
+.landing .container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+.landing .container .intro-landing h1 {
+    font-size: 55px;
+    line-height: 1.5;
+}
+.landing .container .intro-landing p {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.591);
+    margin-bottom: 50px;
+    max-width: 100%;
+}
+.landing .container .intro-landing .links-landing a {
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: black;
+    transition: 0.3s;
+}
+.landing .container .intro-landing .links-landing a:hover {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.landing .container .img-landing img {
+    max-width: 500px;
+}
+@media (max-width: 990px) {
+    .landing .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .landing .container .intro-landing {
+        text-align: center;
+        margin-top: 60px;
+    }
+    .landing .container .intro-landing h1 {
+        font-size: 30px;
+        margin-top: 30px;
+        color: var(--main-color);
+        margin-bottom: 10px;
+    }
+    .landing .container .intro-landing p {
+        margin-bottom: 20px;
+    }
+    .landing .container .intro-landing .links-landing {
+        display: flex;
+        justify-content: center;
+    }
+    .landing .container .intro-landing .links-landing a{
+        margin: 0 5px 40px 5px;
+        padding: 7px;
+    
+    }
+    .landing .container .img-landing img {
+        max-width: 300px;
+    }
+}
+/* End landing */
+/* Start Services */
+.services {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+    position: relative;
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+}
+.services .container .card {
+    border: 1px solid black;
+    position: relative;
+    transition: 0.3s;
+}
+.services .container .card:hover {
+    border-top-width: 5px;
+    border-top-color:var(--main-color) ;
+}
+.services .container .card img {
+    width: 70px;
+    display: block;
+    margin: auto;
+    padding: 30px 0;
+}
+.services .container .card h3 {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: normal;
+}
+.services .container .card p {
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.services .link h3 {
+    text-align: center;
+    margin-top: 60px;
+}
+.services .link a{
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: black;
+    transition: 0.3s;
+}
+.services .link a:hover {
+    background-color: var(--main-color);
+}
+.services1 {
+    padding-top: 150px;
+}
+/* End Services */
+/* Start buy */
+.buy {
+    padding-top: var(--padding-section);
+}
+.buy .container .svr {
+    display: flex;
+    align-items: center;
+    border-bottom:3px solid var(--main-color) ;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    justify-content: space-between;
+}
+.buy .container .svr .img img {
+    max-width: 300px;
+}
+.buy .container .svr .intro-buy h3 {
+    margin:  0 0 30px 30px;
+    font-size: 30px;
+}
+.buy .container .svr .intro-buy p {
+    margin: 0 0 0 45px;
+    line-height: 1.5;
+    max-width: 900px;
+} 
+.buy .container .svr .intro-buy h4 {
+    margin: 40px 0 0 45px;
+}
+.buy .container .svr .intro-buy a {
+    color: white;
+    background-color: black;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+.buy .container .svr .intro-buy a:hover {
+    background-color: var(--main-color);
+}
+@media (max-width :767px) {
+    .buy .container .svr:nth-child(2){
+        padding-bottom:0;
+    }
+    .buy .container .svr {
+        flex-direction: column;
+        text-align: center;
+    }.buy .container .svr .img:nth-child(2) {
+        margin-top: 50px;
+    }
+    .buy .container .svr .img:first-child,
+    .buy .container .svr .img:last-child {
+        margin-bottom: 50px;
+    }
+    .buy .container .svr .intro-buy p {
+        margin: 0;
+    } 
+    .buy .container .svr .intro-buy h4 {
+        margin: 40px 0 0 0;
+    }
+    .buy .container .svr .intro-buy h3 {
+        margin:  0 0 30px 0;
+        font-size: 30px;
+    }
+}
+.buy1 {
+    padding-top:150px ;
+}
+/* End buy */
+/* start testimonial */
+.testimonial {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.testimonial .container img {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.testimonial .container h2{
+    text-align: center;
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 25px;
+}
+.testimonial .container p {
+    line-height: 1.5;
+    text-align: center;
+}
+/* end testimonial */
+/* Strat contactus */
+.contactus {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.contactus .container h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.contactus .container form input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    display: block;
+    margin-bottom: 20px;
+    min-width: 300px;
+}
+.contactus .container form button {
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: black;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+} 
+.contactus .container form button:hover {
+    background-color: var(--main-color);
+}
+.contactus1 {
+    padding-top: 200px;
+    height: 100vh;
+}
+/* end contactus */
+/* Start location */
+.location {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.location .container iframe {
+    width: 100%;
+}
+@media (max-width: 767px) {
+    .contactus .container h2 {
+        text-align: center;
+    }
+    .contactus .container form input {
+        width: 100%;
+        text-align: center;
+    }
+    .contactus .container form input::placeholder {
+        text-align: center;
+    }
+    .contactus .container form button {
+        display: block;
+        margin: auto;
+        width: 150px;
+    }
+}
+/* End location */
+/* Start footer */
+footer {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minMax(250px, 1fr));
+    gap: 30px;
+}
+footer .container h3 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+footer .container p {
+    line-height: 1.5;
+}
+footer .container h2 {
+    margin-bottom: 15px;
+}
+footer .container input {
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+footer .container button {
+    border: none;
+    outline: none;
+    padding: 7px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+footer .container button:hover {
+    background-color: var(--main-color);
+}
+@media (max-width: 767px) {
+    footer {
+        text-align: center;
+    }
+    footer .container p {
+        margin-bottom: 30px;
+    }
+}
+/* End footer */
+/* Start end */
+.end {
+    background-color: rgb(199, 198, 198);
+    text-align: center;
+}
+.end .container h3 {
+    color: black;
+    font-weight: normal;
+    padding: 20px 0;
+    line-height: 1.5;
+}
+.end .container span {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 25px;
+}
+/* End end */
+
